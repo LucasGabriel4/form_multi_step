@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&family=Titillium+Web:wght@700&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet"/>
+    <title>Form multi step</title>
+  </head>
+  <body>
+
+    <form data-js="form">
+       <div class="form__container">
+         <div class="steps">
+              <strong data-js="step">Contato</strong>
+
+              <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_408_260)">
+                <path d="M8.41663 5L13.4166 10L8.41663 15" stroke="#323238" stroke-width="2" stroke-linecap="square"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_408_260">
+                <rect width="20" height="20" fill="white" transform="translate(0.5)"/>
+                </clipPath>
+                </defs>
+                </svg>
+                
+              <strong data-js="step">Empresa</strong>
+
+              <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_408_260)">
+                <path d="M8.41663 5L13.4166 10L8.41663 15" stroke="#323238" stroke-width="2" stroke-linecap="square"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_408_260">
+                <rect width="20" height="20" fill="white" transform="translate(0.5)"/>
+                </clipPath>
+                </defs>
+                </svg>
+                
+              <strong data-js="step">Projeto</strong>
+         </div>
+
+         <div class="form__step" data-js="form-step">
+            <div class="content">
+               <div class="input__wrapper" data-js="input__wrapper">
+                  <label for="nome">Nome Completo</label>
+                  <input type="text" name="nome" placeholder="Como prefere ser chamado" required>
+
+                  <label for="telefone">Telefone</label>
+                  <input type="phone" name="telefone" placeholder="(xx)xxxxx-xxxx" required>
+
+                  <label for="email">E-mail</label>
+                  <input type="email" name="email" placeholder="Digite seu e-mail" required></input>
+
+               </div><!--input__wrapper-->
+
+               <div class="buttons justify-end">
+                   <button type="button" class="btn next" data-btn="next">Continuar</button>
+         
+               </div><!--buttons-->
+            </div><!--content-->
+            
+         </div><!--form__step-->
+
+
+         <div class="form__step hide" data-js="form-step">
+          <div class="content">
+             <div class="input__wrapper"  data-js="input__wrapper">
+                <label for="company-name">Nome da empresa</label>
+                <input type="text" name="company-name" placeholder="Qual é o nome da empresa" required>
+
+                <label for="number-of-employees">Número de funcionários</label>
+                <input type="number" name="number-of-employees" placeholder="Digite o número de colaboradores" required>
+
+                <label for="company-name">Sobre seu negócio</label>
+                <textarea placeholder="Qual é o nome da empresa" required></textarea>
+
+             </div><!--input__wrapper-->
+
+             <div class="buttons space-between">
+                 <button type="button" class="btn prev" data-btn="prev">Voltar</button>
+                 <button type="button" class="btn next" data-btn="next">Continuar</button>
+       
+             </div><!--buttons-->
+          </div><!--content-->
+          
+       </div><!--form__step-->
+
+
+
+       <div class="form__step hide" data-js="form-step">
+        <div class="content">
+           <div class="input__wrapper"  data-js="input__wrapper">
+              <label for="company-name">Objetivos do projeto</label>
+              <textarea placeholder="Descreva quais os objetivos desse projeto" required></textarea>
+
+           </div><!--input__wrapper-->
+
+           <div class="buttons space-between">
+               <button type="button" class="btn prev" data-btn="prev">Voltar</button>
+               <button type="submit" class="btn next">Enviar Proposta</button>
+     
+           </div><!--buttons-->
+        </div><!--content-->
+        
+     </div><!--form__step-->
+
+
+         
+      
+       </div><!--form__container-->
+    </form>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
